@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  background: #bbb;
+}
+
+.invader {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 400px;
+  background: green;
+  visibility: hidden;
+}
