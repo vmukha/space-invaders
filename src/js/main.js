@@ -1,4 +1,4 @@
-let i = 0;
+let i = 0, multiplier = 0;
 let invaderID, inviderElem;
 
 let timeInterval = 50;
@@ -9,13 +9,16 @@ function startGame() {
     invaderID = '#b' + i;
 
     inviderElem = document.querySelector(invaderID);
-    inviderElem.style.left = i * 50 + 'px';
+    inviderElem.style.left = multiplier * 50 + 'px';
     inviderElem.style.visibility = 'visible';
     i++;
-    
+    multiplier++;
+
     console.log(invaderID);
 
-    if (i > 10) {
+    if (multiplier == 11) multiplier = 0;
+
+    if (i > 32) {
       clearInterval(stop);
     }
   }, timeInterval);
